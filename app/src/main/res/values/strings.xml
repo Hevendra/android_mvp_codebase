@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MyCodeBase</string>
+    <string name="choose_category">Choose Category:</string>
+    <string name="next">Next</string>
+
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="api_retry_error">Please retry!</string>
+    <string name="api_default_error">Something wrong happened!</string>
+    <string name="some_error">Some Error Occurred!</string>
+    <string name="connection_error">Internet connection lost!</string>
+    <string name="error_blank_email">Email cann\'t be blank! </string>
+    <string name="error_blank_password">Password cann\'t be blank! </string>
+    <string name="error_invalid_email">Please enter valid email! </string>
+
+    <array name="categories">
+        <item>Newest</item>
+        <item>Highest Rated</item>
+    </array>
+</resources>

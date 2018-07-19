@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_design"
+    android:fitsSystemWindows="true">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="80dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="22dp"
+        app:cardBackgroundColor="@android:color/white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="40dp"
+            android:text="@string/login"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/padding_40"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_extra_dark"
+                android:textColorHint="@color/grey_extra_dark"
+                android:theme="@style/EditTextGrayTheme"
+                android:layout_marginRight="@dimen/padding_20"
+                android:layout_marginLeft="@dimen/padding_20">
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:backgroundTint="@color/grey_dark"
+                    android:hint="Enter Email"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textColor="@color/grey_extra_dark"
+                    android:textColorHint="@color/grey_extra_dark"
+                    android:textSize="@dimen/text_size_14"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_extra_dark"
+                android:textColorHint="@color/grey_extra_dark"
+                android:layout_marginLeft="@dimen/padding_20"
+                android:layout_marginRight="@dimen/padding_20"
+                app:passwordToggleEnabled="true"
+                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                >
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="@color/grey_dark"
+                    android:hint="Enter Password"
+                    android:inputType="textPassword"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textColor="@color/grey_extra_dark"
+                    android:textColorHint="@color/grey_extra_dark"
+                    android:textSize="@dimen/text_size_14"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:padding="10dp"
+                android:text="@string/login"
+                android:textSize="18dp"
+                android:background="@drawable/button_blue_solid"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_google_login"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/transparent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_google_plus" />
+
+            <ImageButton
+                android:id="@+id/ib_fb_login"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="24dp"
+                android:background="@color/transparent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_facebook" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <include
+        layout="@layout/progress_view"/>
+
+
+</RelativeLayout>
